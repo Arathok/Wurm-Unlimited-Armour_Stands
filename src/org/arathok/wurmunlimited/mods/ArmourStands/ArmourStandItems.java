@@ -15,13 +15,13 @@ public class ArmourStandItems {
     public static void registerArmourStandLeather() throws IOException {
         armourStandLeather = new ItemTemplateBuilder("arathok.armourstands.armourstandleather")
                 .name ("Armour Stand Leather(changing model)","Armour Stands ","A piece of furniture made to display various pieces of armor")
-                .modelName("model.arathok.ArmourStand.leather")
+                .modelName("model.arathok.ArmourStand.leather.")
                 .imageNumber((short) IconConstants.ICON_DECO_PRACTICEDOLL)
                 .itemTypes(new short[] {
                         ItemTypes.ITEM_TYPE_DECORATION,
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
-                        ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        //ItemTypes.ITEM_TYPE_BULKCONTAINER,
                         ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
@@ -43,19 +43,19 @@ public class ArmourStandItems {
     public static void registerArmourStandChain() throws IOException {
         armourStandChain = new ItemTemplateBuilder("arathok.armourstands.armourstandchain")
                 .name ("Armour Stand Chain (changing model)","Armour Stands ","A piece of furniture made to display various pieces of armor")
-                .modelName("model.arathok.ArmourStand.plate")
+                .modelName("model.arathok.ArmourStand.chain.")
                 .imageNumber((short) IconConstants.ICON_DECO_PRACTICEDOLL)
                 .itemTypes(new short[] {
                         ItemTypes.ITEM_TYPE_DECORATION,
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
-                        ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        //ItemTypes.ITEM_TYPE_BULKCONTAINER,
                         ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
                 .dimensions( 80,80,100)
-                .weightGrams(20000).material(Materials.MATERIAL_WOOD_FIR)
+                .weightGrams(20000)
                 .behaviourType((short)1)
                 .primarySkill(SkillList.CARPENTRY_FINE)
                 .difficulty (30)
@@ -67,19 +67,19 @@ public class ArmourStandItems {
     public static void registerArmourStandPlate() throws IOException {
         armourStandPlate = new ItemTemplateBuilder("arathok.armourstands.armourstandplate")
                 .name ("Armour Stand Plate(changing model)","Armour Stands ","A piece of furniture made to display various pieces of armor")
-                .modelName("model.arathok.ArmourStand.plate")
+                .modelName("model.arathok.ArmourStand.plate.")
                 .imageNumber((short) IconConstants.ICON_DECO_PRACTICEDOLL)
                 .itemTypes(new short[] {
                         ItemTypes.ITEM_TYPE_DECORATION,
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
-                        ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        //ItemTypes.ITEM_TYPE_BULKCONTAINER,
                         ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
                 .dimensions( 80,80,100)
-                .weightGrams(20000).material(Materials.MATERIAL_WOOD_FIR)
+                .weightGrams(20000)
                 .behaviourType((short)1)
                 .primarySkill(SkillList.CARPENTRY_FINE)
                 .difficulty (30)
@@ -91,19 +91,19 @@ public class ArmourStandItems {
     public static void registerArmourStandDrake() throws IOException {
         armourStandDrake = new ItemTemplateBuilder("arathok.armourstands.armourstanddrake")
                 .name ("Armour Stand Drake(changing model)","Armour Stands ","A piece of furniture made to display various pieces of armor")
-                .modelName("model.arathok.ArmourStand.drake")
+                .modelName("model.arathok.ArmourStand.drake.")
                 .imageNumber((short) IconConstants.ICON_DECO_PRACTICEDOLL)
                 .itemTypes(new short[] {
                         ItemTypes.ITEM_TYPE_DECORATION,
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
-                        ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        //ItemTypes.ITEM_TYPE_BULKCONTAINER,
                         ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
                 .dimensions( 80,80,100)
-                .weightGrams(20000).material(Materials.MATERIAL_WOOD_FIR)
+                .weightGrams(20000)
                 .behaviourType((short)1)
                 .primarySkill(SkillList.CARPENTRY_FINE)
                 .difficulty (30)
@@ -115,19 +115,19 @@ public class ArmourStandItems {
     public static void registerArmourStandDragon() throws IOException {
         armourStandDragon = new ItemTemplateBuilder("arathok.armourstands.armourstanddragon")
                 .name ("Armour Stand Dragon(changing model)","Armour Stands ","A piece of furniture made to display various pieces of armor")
-                .modelName("model.arathok.ArmourStand.dragon")
+                .modelName("model.arathok.ArmourStand.dragon.")
                 .imageNumber((short) IconConstants.ICON_DECO_PRACTICEDOLL)
                 .itemTypes(new short[] {
                         ItemTypes.ITEM_TYPE_DECORATION,
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
-                        ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        //ItemTypes.ITEM_TYPE_BULKCONTAINER,
                         ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
                 .dimensions( 80,80,100)
-                .weightGrams(20000).material(Materials.MATERIAL_WOOD_FIR)
+                .weightGrams(20000)
                 .behaviourType((short)1)
                 .primarySkill(SkillList.CARPENTRY_FINE)
                 .difficulty (30)
@@ -139,19 +139,19 @@ public class ArmourStandItems {
     public static void registerArmourStandStuddedLeather() throws IOException {
         armourStandStuddedLeather = new ItemTemplateBuilder("arathok.armourstands.armourstandstuddedleather")
                 .name ("Armour Stand Studded(changing model)","Armour Stands ","A piece of furniture made to display various pieces of armor")
-                .modelName("model.arathok.ArmourStand.studdedleather")
+                .modelName("model.arathok.ArmourStand.studdedleather.")
                 .imageNumber((short) IconConstants.ICON_DECO_PRACTICEDOLL)
                 .itemTypes(new short[] {
                         ItemTypes.ITEM_TYPE_DECORATION,
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
-                        ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        //ItemTypes.ITEM_TYPE_BULKCONTAINER,
                         ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
                 .dimensions( 80,80,100)
-                .weightGrams(20000).material(Materials.MATERIAL_WOOD_FIR)
+                .weightGrams(20000)
                 .behaviourType((short)1)
                 .primarySkill(SkillList.CARPENTRY_FINE)
                 .difficulty (30)

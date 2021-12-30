@@ -57,4 +57,8 @@ public class ArmourStandBehaviour implements BehaviourProvider {
 
         return null;
     }
+    @Override
+    public List<ActionEntry> getBehavioursFor(Creature performer, Item source, Item target) {
+        return getBehavioursFor(performer, target);
+    }
 }

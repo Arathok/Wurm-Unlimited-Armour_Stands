@@ -17,22 +17,22 @@ import java.util.logging.Level;
 
 public class ArmourStandPerformer implements ActionPerformer {
 
-        public ActionEntry actionEntry;
-        public ArmourStandPerformer() {
+    public ActionEntry actionEntry;
 
-                actionEntry = new ActionEntryBuilder((short) ModActions.getNextActionId(), "update armour stand", "updating", new int[]{
-                        6 /* ACTION_TYPE_NOMOVE */,
-                        48 /* ACTION_TYPE_ENEMY_ALWAYS */,
-                        35 /* DONT CARE SOURCE/TARGET*/,
+    public ArmourStandPerformer() {
 
-                }).range(4).build();
+        actionEntry = new ActionEntryBuilder((short) ModActions.getNextActionId(), "update armour stand", "updating", new int[]{
+                6 /* ACTION_TYPE_NOMOVE */,
+                48 /* ACTION_TYPE_ENEMY_ALWAYS */,
+                35 /* DONT CARE SOURCE/TARGET*/,
 
-                ModActions.registerAction(actionEntry);
-            }
+        }).range(4).build();
+
+        ModActions.registerAction(actionEntry);
+    }
 
     @Override
-    public boolean action(Action action, Creature performer, Item source, Item target, short num, float counter)
-    {
+    public boolean action(Action action, Creature performer, Item source, Item target, short num, float counter) {
         return action(action, performer, target, num, counter);
     } // NEEDED OR THE ITEM WILL ONLY ACTIVATE IF YOU HAVE NO ITEM ACTIVE
 
@@ -43,49 +43,88 @@ public class ArmourStandPerformer implements ActionPerformer {
 
     public static boolean canUse(Creature performer, Item source) {
 
-        return performer.isPlayer() && (source.getOwnerId()==performer.getWurmId()||source.getLastOwnerId() == performer.getWurmId()) && !source.isTraded();
+        return performer.isPlayer() && (source.getOwnerId() == performer.getWurmId() || source.getLastOwnerId() == performer.getWurmId()) && !source.isTraded();
     }
 
     @Override
-    public boolean action(Action action, Creature performer, Item target, short num, float counter)
-    {
-        Item[] stuffInArmourstand = target.getItemsAsArray();
+    public boolean action(Action action, Creature performer, Item target, short num, float counter) {
+        if (target.getItemsAsArray().length >0) {
+            Item[] stuffInArmourstand = target.getItemsAsArray();
 
 
-        if (!canUse(performer,target))
-        {
-            performer.getCommunicator().sendAlertServerMessage("You are not allowed to do that");
-            return propagate(action,
-                    ActionPropagation.FINISH_ACTION,
-                    ActionPropagation.NO_SERVER_PROPAGATION,
-                    ActionPropagation.NO_ACTION_PERFORMER_PROPAGATION);
-        }
-        if (stuffInArmourstand[0].getName().contains("leather"))
-        {
-            try {
-                Item newArmourstand = ItemFactory.createItem(ArmourStandItems.armourStandLeatherId,target.getQualityLevel(),null);
-
-               // newArmourstand.setPos(target.getPosX(),target.getPosY(),target.getPosZ(),target.getRotation(),0);
-            } catch (FailedException e) {
-                e.printStackTrace();
-            } catch (NoSuchTemplateException e) {
-                e.printStackTrace();
-                ArmourStands.logger.log(Level.SEVERE,"An Armourstand wanted to update but the ItemTemplate was missing!");
+            if (!canUse(performer, target)) {
+                performer.getCommunicator().sendAlertServerMessage("You are not allowed to do that");
+                return propagate(action,
+                        ActionPropagation.FINISH_ACTION,
+                        ActionPropagation.NO_SERVER_PROPAGATION,
+                        ActionPropagation.NO_ACTION_PERFORMER_PROPAGATION);
             }
-            target.setTemplateId(ArmourStandItems.armourStandLeatherId);
-            for (Item item : stuffInArmourstand)
-            {
-                target.insertItem(item);
+        
+
+            if (stuffInArmourstand[0].getName().contains("leather")) {
+
+                target.setTemplateId(ArmourStandItems.armourStandLeatherId);
+                for (Item item : stuffInArmourstand) {
+                    target.insertItem(item);
+                }
+
+            }
+            if (stuffInArmourstand[0].getName().contains("chain")) {
+
+                target.setTemplateId(ArmourStandItems.armourStandChainId);
+                for (Item item : stuffInArmourstand) {
+                    target.insertItem(item);
+                }
+
             }
 
+            if (stuffInArmourstand[0].getName().contains("plate")) {
+
+                target.setTemplateId(ArmourStandItems.armourStandPlateId);
+                for (Item item : stuffInArmourstand) {
+                    target.insertItem(item);
+                }
+
+            }
+
+            if (stuffInArmourstand[0].getName().contains("studded")) {
+
+                target.setTemplateId(ArmourStandItems.armourStandStuddedLeatherId);
+                for (Item item : stuffInArmourstand) {
+                    target.insertItem(item);
+                }
+
+            }
+
+            if (stuffInArmourstand[0].getName().contains("drake")) {
+
+                target.setTemplateId(ArmourStandItems.armourStandDrakeId);
+                for (Item item : stuffInArmourstand) {
+                    target.insertItem(item);
+                }
+
+            }
+
+            if (stuffInArmourstand[0].getName().contains("dragon")) {
+
+                target.setTemplateId(ArmourStandItems.armourStandDragonId);
+                for (Item item : stuffInArmourstand) {
+                    target.insertItem(item);
+                }
+
+            }
+
+
         }
+        else
+            performer.getCommunicator().sendAlertServerMessage("The armour stand is empty and can not update!");
         return propagate(action,
                 ActionPropagation.FINISH_ACTION,
                 ActionPropagation.NO_SERVER_PROPAGATION,
                 ActionPropagation.NO_ACTION_PERFORMER_PROPAGATION);
-
     }
+}
 
 
-    }
+
 
