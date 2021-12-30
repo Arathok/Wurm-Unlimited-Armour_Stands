@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ArmourStands">
+    <output-path>D:/Spiele/Steam/steamapps/common/Wurm Unlimited Dedicated Server/mods/ArmourStands</output-path>
+    <root id="archive" name="ArmourStands.jar">
+      <element id="module-output" name="Wurm-Unlimited-Armour_Stands" />
+    </root>
+  </artifact>
+</component>

@@ -1,13 +1,11 @@
-package org.arathaok.wurmunlimited.mods.ArmourStands; // HELLO GITHUB!
+package org.arathok.wurmunlimited.mods.ArmourStands; // HELLO GITHUB!
 
 import com.wurmonline.server.creatures.Communicator;
 import org.gotti.wurmunlimited.modloader.interfaces.*;
 import org.gotti.wurmunlimited.modsupport.actions.ModActions;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Properties;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ArmourStands implements WurmServerMod, Initable, PreInitable, Configurable, ItemTemplatesCreatedListener, ServerStartedListener, ServerPollListener, PlayerMessageListener{
@@ -44,7 +42,7 @@ public class ArmourStands implements WurmServerMod, Initable, PreInitable, Confi
     public void onItemTemplatesCreated() {
 
         try {
-            Item.register();
+            ArmourStandItems.register();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -57,7 +55,7 @@ public class ArmourStands implements WurmServerMod, Initable, PreInitable, Confi
     @Override
     public void onServerStarted() {
         // TODO Auto-generated method stub
-
+        ModActions.registerBehaviourProvider(new ArmourStandBehaviour());
 
     }
 
