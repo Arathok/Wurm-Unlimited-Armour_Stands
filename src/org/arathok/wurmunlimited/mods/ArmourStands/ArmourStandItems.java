@@ -22,11 +22,12 @@ public class ArmourStandItems {
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
                         ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
                 .dimensions( 80,80,100)
-                .weightGrams(20000).material(Materials.MATERIAL_WOOD_FIR)
+                .weightGrams(20000)
                 .behaviourType((short)1)
                 .primarySkill(SkillList.CARPENTRY_FINE)
                 .difficulty (30)
@@ -40,7 +41,7 @@ public class ArmourStandItems {
     }
 
     public static void registerArmourStandChain() throws IOException {
-        armourStandChain = new ItemTemplateBuilder("arathok.armourstands.armourstandplate")
+        armourStandChain = new ItemTemplateBuilder("arathok.armourstands.armourstandchain")
                 .name ("Armour Stand Chain (changing model)","Armour Stands ","A piece of furniture made to display various pieces of armor")
                 .modelName("model.arathok.ArmourStand.plate")
                 .imageNumber((short) IconConstants.ICON_DECO_PRACTICEDOLL)
@@ -49,6 +50,7 @@ public class ArmourStandItems {
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
                         ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
@@ -72,6 +74,7 @@ public class ArmourStandItems {
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
                         ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
@@ -95,6 +98,7 @@ public class ArmourStandItems {
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
                         ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
@@ -118,6 +122,7 @@ public class ArmourStandItems {
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
                         ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)
@@ -141,6 +146,7 @@ public class ArmourStandItems {
                         ItemTypes.ITEM_TYPE_TURNABLE,
                         ItemTypes.ITEM_TYPE_PLANTABLE,
                         ItemTypes.ITEM_TYPE_BULKCONTAINER,
+                        ItemTypes.ITEM_TYPE_HOLLOW,
 
                 })
                 .decayTime(90720000L)

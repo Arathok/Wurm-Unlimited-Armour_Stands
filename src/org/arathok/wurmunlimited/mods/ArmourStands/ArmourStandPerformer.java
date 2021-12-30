@@ -52,7 +52,14 @@ public class ArmourStandPerformer implements ActionPerformer {
         Item[] stuffInArmourstand = target.getItemsAsArray();
 
 
-
+        if (!canUse(performer,target))
+        {
+            performer.getCommunicator().sendAlertServerMessage("You are not allowed to do that");
+            return propagate(action,
+                    ActionPropagation.FINISH_ACTION,
+                    ActionPropagation.NO_SERVER_PROPAGATION,
+                    ActionPropagation.NO_ACTION_PERFORMER_PROPAGATION);
+        }
         if (stuffInArmourstand[0].getName().contains("leather"))
         {
             try {

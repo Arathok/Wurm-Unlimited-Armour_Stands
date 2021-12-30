@@ -26,30 +26,30 @@ public class ArmourStandBehaviour implements BehaviourProvider {
     //, , , , ;
 
     @Override
-    public List<ActionEntry> getBehavioursFor(Creature performer, Item source, Item target) {
+    public List<ActionEntry> getBehavioursFor(Creature performer, Item target) {
 
-        if (source.getTemplateId() == ArmourStandItems.armourStandLeatherId) {
-            if (ArmourStandPerformer.canUse(performer, source))
+        if (target.getTemplateId() == ArmourStandItems.armourStandLeatherId) {
+            if (ArmourStandPerformer.canUse(performer, target))
                 return new ArrayList<>(updateArmourStand);
         }
-        else if (source.getTemplateId() == ArmourStandItems.armourStandStuddedLeatherId) {
-            if (ArmourStandPerformer.canUse(performer, source))
+        else if (target.getTemplateId() == ArmourStandItems.armourStandStuddedLeatherId) {
+            if (ArmourStandPerformer.canUse(performer, target))
                 return new ArrayList<>(updateArmourStand);
         }
-        else if (source.getTemplateId() == ArmourStandItems.armourStandChainId) {
-            if (ArmourStandPerformer.canUse(performer, source))
+        else if (target.getTemplateId() == ArmourStandItems.armourStandChainId) {
+            if (ArmourStandPerformer.canUse(performer, target))
                 return new ArrayList<>(updateArmourStand);
         }
-        else if (source.getTemplateId() == ArmourStandItems.armourStandPlateId) {
-            if (ArmourStandPerformer.canUse(performer, source))
+        else if (target.getTemplateId() == ArmourStandItems.armourStandPlateId) {
+            if (ArmourStandPerformer.canUse(performer, target))
                 return new ArrayList<>(updateArmourStand);
         }
-        else if (source.getTemplateId() == ArmourStandItems.armourStandDrakeId) {
-            if (ArmourStandPerformer.canUse(performer, source))
+        else if (target.getTemplateId() == ArmourStandItems.armourStandDrakeId) {
+            if (ArmourStandPerformer.canUse(performer, target))
                 return new ArrayList<>(updateArmourStand);
         }
-        else if (source.getTemplateId() == ArmourStandItems.armourStandDragonId) {
-            if (ArmourStandPerformer.canUse(performer, source))
+        else if (target.getTemplateId() == ArmourStandItems.armourStandDragonId) {
+            if (ArmourStandPerformer.canUse(performer, target))
                 return new ArrayList<>(updateArmourStand);
         }
          else
