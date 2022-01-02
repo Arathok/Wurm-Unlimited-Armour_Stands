@@ -3,6 +3,7 @@ package org.arathok.wurmunlimited.mods.ArmourStands;
 import com.wurmonline.server.items.*;
 import com.wurmonline.server.skills.SkillList;
 import com.wurmonline.shared.constants.IconConstants;
+import com.wurmonline.shared.constants.ItemMaterials;
 import org.gotti.wurmunlimited.modsupport.ItemTemplateBuilder;
 
 import java.io.IOException;
@@ -30,11 +31,12 @@ public class ArmourStandItems {
                 .weightGrams(20000)
                 .behaviourType((short)1)
                 .primarySkill(SkillList.CARPENTRY_FINE)
+                .material (ItemMaterials.MATERIAL_WOOD_FIR)
                 .difficulty (30)
                 .build();
         armourStandLeatherId = armourStandLeather.getTemplateId();
         CreationEntryCreator
-                .createAdvancedEntry(SkillList.ALCHEMY_NATURAL, ItemList.nailsIronSmall, ItemList.plank, armourStandLeatherId, true, true,0.0f, true, false,0,5, CreationCategories.DECORATION)
+                .createAdvancedEntry(SkillList.CARPENTRY_FINE, ItemList.nailsIronSmall, ItemList.plank, armourStandLeatherId, true, true,0.0f, true, false,0,5, CreationCategories.DECORATION)
                 .addRequirement(new CreationRequirement(1, ItemList.plank, 12, true))
                 .addRequirement(new CreationRequirement(2, ItemList.pegWood, 7, true))
                 .addRequirement(new CreationRequirement(3, ItemList.shaft, 6, true));
